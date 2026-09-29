@@ -61,3 +61,4 @@ runs/
 *.pth
 *.onnx
 *.engine
+/video_testing/
