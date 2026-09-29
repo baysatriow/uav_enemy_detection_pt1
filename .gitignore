@@ -1,0 +1,53 @@
+# Byte-compiled / optimized / C-extensions
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Packaging / Distribution
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Logs & profiling
+*.log
+prof/
+
+# Machine Learning / Deep Learning weights & datasets (opsional, sesuaikan kebutuhan)
+# *.pt
+# *.pth
+# *.onnx
+# *.engine
+# data/
+# datasets/
+# runs/
