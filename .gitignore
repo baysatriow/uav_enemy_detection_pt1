@@ -43,16 +43,7 @@ build/
 *.log
 prof/
 
-# Machine Learning / Deep Learning weights & datasets (opsional, sesuaikan kebutuhan)
-# *.pt
-# *.pth
-# *.onnx
-# *.engine
-# data/
-# datasets/
-# runs/
-
-# Training environment and generated artifacts
+# Local training environment and generated model artifacts
 .venv-training/
 datasets/
 runs/
@@ -62,3 +53,14 @@ runs/
 *.onnx
 *.engine
 /video_testing/
+
+# Local AI documentation and report artifacts
+/.superpowers/
+/docs/
+
+# Partial downloads
+*.part
+
+# Local training reports
+/training_reports_latest/
+/training_reports_latest.zip
