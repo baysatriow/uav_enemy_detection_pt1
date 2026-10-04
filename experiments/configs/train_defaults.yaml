@@ -1,0 +1,41 @@
+# Shared training defaults for YOLO26 CBAM experiments (E0 to E6)
+
+# Model architecture scale (n, s, m, l, x)
+model_size: "x"
+
+# Batch size mapping by scale
+batch_sizes:
+  n: -1
+  s: 32
+  m: 12
+  l: 12
+  x: 8
+
+# Training hyperparameters
+epochs: 100
+imgsz: 640
+patience: 25
+optimizer: "auto"
+amp: true
+cache: false
+seed: 42
+workers: 4
+save: true
+save_period: 10
+plots: true
+verbose: true
+
+# Project run directory
+project: "runs/experiments"
+
+# Dataset paths
+dataset_dir: "datasets/enemy-detection-1-fps-v1"
+dataset_yaml: "datasets/enemy-detection-1-fps-v1/data_yolo26_local.yaml"
+fallback_dataset_yaml: "datasets/enemy-detection-1-fps-v1/data.yaml"
+
+# Roboflow settings for auto-download
+roboflow:
+  workspace: "aaaa-g4pgj"
+  project: "enemy-detection-1-fps"
+  version: 1
+  format: "yolo26"
