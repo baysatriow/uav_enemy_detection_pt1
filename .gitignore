@@ -46,6 +46,7 @@ prof/
 # Local training environment and generated model artifacts
 .venv-training/
 datasets/
+enemy-detection*/
 runs/
 /weights/
 *.pt

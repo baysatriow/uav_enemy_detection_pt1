@@ -63,12 +63,15 @@ def evaluate_model(
                     data_yaml = PROJECT_ROOT / cfg.get("fallback_dataset_yaml", "")
 
         if not data_yaml or not Path(data_yaml).is_file():
-            data_yaml = (
-                PROJECT_ROOT
-                / "datasets"
-                / "enemy-detection-1-fps-v1"
-                / "data_yolo26_local.yaml"
-            )
+            candidates = [
+                PROJECT_ROOT / "enemy-detection-1-fps-1" / "data.yaml",
+                PROJECT_ROOT / "datasets" / "enemy-detection-1-fps-v1" / "data_yolo26_local.yaml",
+                PROJECT_ROOT / "datasets" / "enemy-detection-1-fps-v1" / "data.yaml",
+            ]
+            for cand in candidates:
+                if cand.is_file():
+                    data_yaml = cand
+                    break
 
     data_yaml = Path(data_yaml).resolve()
     if not data_yaml.is_file():
